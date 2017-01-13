@@ -3,7 +3,7 @@ var Discord = require("discord.js");
 module.exports = {
 	delete: function () {
 		//message count to prune
-		let messagecount = parseInt(params[0]);
+		let messagecount = parseInt(args[0]);
 		//channel logs
 		m.channel.fetchMessages({limit: 100})
 		.then(messages => {
