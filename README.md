@@ -2,9 +2,9 @@
 A discord.js v10, fully modular, selfbot.
 
 # Requirements
-Node 6.9.3
-Discord.js v10
-Git
+1. Node 6.9.3
+1. Discord.js v10
+1. Git
 
 # Install
 1. git clone https://github.com/motiond3v/selfie.git
