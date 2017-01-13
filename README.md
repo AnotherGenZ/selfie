@@ -1,10 +1,11 @@
-# Selfie
+# Selfie Indev
 A discord.js v10, fully modular, selfbot.
+INDEV MAY NOT BE STABLE!
 
 # Requirements
 1. Node 6.9.3
-1. Discord.js v10
-1. Git
+2. Discord.js v10
+3. Git
 
 # Install
 1. git clone https://github.com/motiond3v/selfie.git
