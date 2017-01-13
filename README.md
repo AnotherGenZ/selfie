@@ -1,4 +1,4 @@
-# Selfie Unstable
+# Selfie Indev
 A discord.js v10, fully modular, selfbot.
 
 
