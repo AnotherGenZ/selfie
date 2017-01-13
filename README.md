@@ -1,6 +1,6 @@
-# Selfie Indev
+# Selfie Unstable
 A discord.js v10, fully modular, selfbot.
-INDEV MAY NOT BE STABLE!
+
 
 # Requirements
 1. Node 6.9.3
