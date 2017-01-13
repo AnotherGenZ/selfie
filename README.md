@@ -8,7 +8,7 @@ A discord.js v10, fully modular, selfbot.
 3. Git
 
 # Install
-1. git clone https://github.com/motiond3v/selfie.git
+1. git clone -b indev https://github.com/motiond3v/selfie.git
 2. npm install discord.js
 3. add token in self.js
 4. node self.js
