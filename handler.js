@@ -1,5 +1,9 @@
 var Discord = require("discord.js");
-var ai = require("./commands/ai");
+var prune = require("./commands/prune");
+var ready = require("./commands/ready");
+var kick = require("./commands/kick");
+var info = require("./commands/info");
+var add = require("./commands/add");
 
 function clean(text) {
   if (typeof(text) === "string")
@@ -11,24 +15,52 @@ function clean(text) {
 
 module.exports = function (bot) {
     bot.on("message", m => {
+        if (m.author !== bot.user) return;
         global.m = m;
         
-        //set prefix(s)
+        //set prefix
         var p = ">+";
         if (!m.content.startsWith(p)) return;
 
         //args
         global.args = m.content.split(" ").slice(1);
         
-		if (m.content.startsWith(p + "hello")) {
-			ai.hello();
-			console.log(ai.hello);
+        //commands
+        
+        //prune
+        if (m.content.startsWith(p + "prune")) {
+            prune.delete();
+        }
+        
+        //kick
+        if (m.content.startsWith(p + "kick")) {
+            kick.user();
+        }
+		
+		//info
+		if (m.content.startsWith(p + "info")) {
+			info.bot();
 		}
 		
-		if (m.content.startsWith(p + "how are you?")) {
-			ai.hay();
-			console.log(ai.hay);
+		//eval
+		if(m.content.startsWith(p + "eval")) {
+			try {
+				var code = args.join(" ");
+				var evaled = eval(code);
+
+				if (typeof evaled !== "string")
+				evaled = require("util").inspect(evaled);
+
+				m.channel.sendCode("xl", clean(evaled));   
+				} catch(err) {
+				m.channel.sendMessage(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+				console.log("Eval successfull");
+			}
 		}
 		
+		//add
+		if(m.content.startsWith(p + "add")) {
+			add.math();
+		}
     });
 };
