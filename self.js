@@ -6,4 +6,4 @@ bot.on("ready", () => {
     handler(bot);
 });
 
-bot.login("MTg2NTMyNTE0MTYzMDY0ODQy.Coq-Yw.6zLU_e4f8b9VNrdWrRPpYtujp64");
+bot.login("user-token-here");
