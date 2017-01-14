@@ -18,11 +18,13 @@ module.exports = {
             .setTitle('Selfie Bot By Motion')
             .setColor(0x00AE86)
             .setDescription('Information about Selfie')
-			.addField('Ram Usage', bytesToSize(usage.heapTotal))
-			.addField('Servers', `Motion is in ${bot.guilds.size} guilds`)
-            .addField('Channels', `Motion is in ${bot.channels.size} channels`)
-            .addField('Users', `Motion knows ${bot.users.size} users`);
-			m.channel.sendEmbed(
+	    .addField('Ram Usage', bytesToSize(usage.heapTotal))
+	    .addField('Servers', `${bot.user.username} is in ${bot.guilds.size} guilds`)
+            .addField('Channels', `${bot.user.username} is in ${bot.channels.size} channels`)
+            .addField('Users', `${bot.user.username} knows ${bot.users.size} users`)
+	    .addField('Discord.JS Version', `${Discord.version}`);
+				m.delete();
+				m.channel.sendEmbed(
 				infoEmbed,
 				'')
 	}
