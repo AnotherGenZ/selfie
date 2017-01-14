@@ -1,0 +1,32 @@
+{
+  "name": "selfbot",
+  "version": "1.0.0",
+  "description": "A discord.js v11 selfbot. Completely Modular.",
+  "main": "self.js",
+  "dependencies": {
+    "discord.js": "^11.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motiond3v/selfie.git"
+  },
+  "keywords": [
+    "discord",
+    "js",
+    "selfie",
+    "github",
+    "bot",
+    "dev",
+    "motion"
+  ],
+  "author": "Motion",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/motiond3v/selfie/issues"
+  },
+  "homepage": "https://github.com/motiond3v/selfie#readme"
+}
